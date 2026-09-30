@@ -62,6 +62,7 @@ Examples for the Qt %{major} Web Sockets module
 # FIXME why are OpenGL lib paths autodetected incorrectly, preferring
 # /usr/lib over /usr/lib64 even on 64-bit boxes?
 %cmake -G Ninja \
+	-DQT_BUILD_TESTS:BOOL=OFF \
 	-DCMAKE_INSTALL_PREFIX=%{_qtdir} \
 	-DQT_BUILD_EXAMPLES:BOOL=ON \
 	-DQT_WILL_INSTALL:BOOL=ON
